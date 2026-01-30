@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Farm Life – Charlemagne Jose</title>
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Custom CSS -->
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top shadow">
+<div class="container">
+<a class="navbar-brand fw-bold" href="index.html">Farm Life</a>
+<button class="navbar-toggler" data-bs-target="#navMenu" data-bs-toggle="collapse">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navMenu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+<li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+<li class="nav-item"><a class="nav-link" href="achievement.html">Achievement</a></li>
+<li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- ✅ Welcome Popup (for marks) -->
+<div class="welcome-overlay" id="welcomeOverlay" aria-hidden="true">
+  <div class="welcome-card" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
+    <div class="welcome-top">
+      <h3 id="welcomeTitle">Welcome to Farm Life 🌿</h3>
+      <p>A short look into discipline, farming, and inspiration</p>
+    </div>
+    <div class="welcome-body">
+      <p class="mb-2">
+        Welcome! Explore the website using the menu above.
+        You can view <strong>About</strong>, <strong>Gallery</strong>, <strong>Achievements</strong>, and <strong>Education</strong>.
+      </p>
+      <p class="mb-0 text-muted" style="font-size:.95rem;">
+        Tip: Click any photo to zoom, and use the music button if you want background music.
+      </p>
+    </div>
+    <div class="welcome-actions">
+      <button class="btn btn-outline-success" id="welcomeClose" type="button">Close</button>
+      <button class="btn btn-success" id="welcomeOk" type="button">Let’s go</button>
+    </div>
+  </div>
+</div>
+
+<!-- Hero Section -->
+<section class="hero-custom text-center text-white">
+<img alt="Fish Pond" class="hero-image zoomable" loading="lazy" src="fish-pond.jpg"/>
+<h1 class="display-4 fw-bold mt-4">Charlemagne Anak Joanes Jose</h1>
+<p class="lead mb-4">Farm Life • Discipline • Inspiration</p>
+<img alt="Plantation" class="hero-image zoomable" loading="lazy" src="plantation-1.jpg"/>
+</section>
+<!-- Preview Section -->
+<section class="container my-5 text-center">
+<h2 class="section-title">Explore the Farm Life</h2>
+<div class="row g-4 mt-4">
+<div class="col-md-3"><a class="info-card" href="about.html"><h4>About My Father</h4></a></div>
+<div class="col-md-3"><a class="info-card" href="gallery.html"><h4>Gallery</h4></a></div>
+<div class="col-md-3"><a class="info-card" href="achievement.html"><h4>Achievement</h4></a></div>
+<div class="col-md-3"><a class="info-card" href="education.html"><h4>Education</h4></a></div>
+</div>
+</section>
+<!-- Video Preview -->
+<section class="container my-5 text-center">
+<video class="video-preview" controls="">
+<source src="chicken.mp4" type="video/mp4"/>
+</video>
+</section>
+<!-- Malaysia Date & Time -->
+<section class="container my-4 text-center">
+<div class="time-box">
+<p class="fw-bold mb-1"> Malaysia Time</p>
+<p class="mb-0" id="myTime"></p>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-success text-white text-center py-4">
+<p class="mb-0">© 2025 Farm Life | Charlemagne Jose</p>
+<p class="small mb-0">
+    Background music: Matt Redman – 10,000 Reasons (Bless the Lord)
+  </p>
+</footer>
+<!-- 🎵 Hidden Audio -->
+<audio id="bgMusic" loop="">
+<source src="Matt Redman - 10,000 Reasons (Bless the Lord).mp3" type="audio/mpeg"/>
+</audio>
+<!-- 🎵 Floating Music Button -->
+<button class="music-btn" id="musicBtn">▶️</button>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="javascript.js"></script>
+<!-- Welcome Modal (for marks) -->
+<div class="welcome-modal" id="welcomeModal" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
+  <div class="welcome-box">
+    <h2 id="welcomeTitle">🌿 Welcome to Farm Life</h2>
+    <p class="mb-0">
+      Explore the farm life, achievements, and education journey of
+      <strong>Charlemagne Jose</strong>.
+    </p>
+    <div class="d-flex gap-2 justify-content-center mt-3">
+      <button class="btn btn-success" onclick="closeWelcome()">Explore Website</button>
+      <a class="btn btn-outline-success" href="gallery.html">View Gallery</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
